@@ -3,6 +3,7 @@ const sections = document.querySelectorAll(".section");
 const sectBtns = document.querySelectorAll(".controls");
 const sectBtn = document.querySelectorAll(".control");
 const allsections = document.querySelector(".main-content");
+const controls = document.querySelector('.controls');
 
 
 // page transition function (for the icons)

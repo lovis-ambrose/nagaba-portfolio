@@ -1,3 +1,4 @@
+/* general styling */
 *{
     margin: 0;
     padding: 0;
@@ -48,44 +49,51 @@ section{
 }
 
 .section{
+    height: auto;
     transform: translateY(-100%) scale(0);
     transition: all .4s ease-in-out;
-    background-color: var(--color-primary); 
 }
 
 .sec1{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(205, 184, 90);
 }
 
 .sec2{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: slateblue;
 }
 
 .sec3{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(205, 172, 90);
 }
 
 .sec4{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(12, 9, 34);
 }
 
 .sec5{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(90, 174, 205);
 }
 
-.active{
+/* transitioning the pages */
+.active {
     display: block;
+    animation: scaleAnim 1s ease-in-out;
 }
+
+@keyframes scaleAnim {
+    0% {
+        transform: translateY(-100%) scaleY(0);
+    }
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+}
+
 
 /* button controlls */
 .controls{
@@ -125,4 +133,106 @@ section{
     }
 }
 
+/* header content */
+.header-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    .left-header{
+        display: flex;
+        align-items: center;position: relative;
+        .h-shape{
+            transition: all .4s ease-in-out;
+            width: 56%;
+            height: 100%;
+            background-color: var(--color-secondary);
+            position: absolute;
+            left: 0;top: 0;
+            z-index: -1;
+            clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+        }
+        .image{
+            border-radius: var(--br-sm-2);
+            height: 90%;
+            width: 68%;
+            margin-left: 4rem;
+            background-color: var(--color-black);
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all .4s ease-in-out;
+                filter: grayscale(100%);
+                &:hover{
+                    filter: grayscale(0);
+                }
+            }
+        }
+    }
+    .right-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 18rem;
+        .name{
+            font-style: 3rem;
+            span{
+                color: var(--color-secondary);
+            }
+        }
+        p{
+            margin: 1.5rem 0;
+            line-height: 2rem;
+        }
+    }
+}
 
+/* 
+** independent components**
+*/
+.btn-con{
+    display: flex;
+    align-self: flex-start;
+}
+.main-btn{
+    border-radius: 30px;
+    color: inherit;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid var(--color-secondary);
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    overflow: hidden;
+    .btn-text{
+        padding: 0 2rem;
+    }
+    .btn-icon{
+        background-color: var(--color-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 1rem;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;right: 0;
+        transform: translateX(100%); /* animate from the right(positive) */
+        transition: all .4s ease-in-out;
+        z-index: -1;
+    }
+    /* download button animation */
+    &:hover{
+        &::before{
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-secondary);
+            transform: translateX(0);
+        }
+    }
+}
+
+/* about section */
+/* 1:07:00 */
