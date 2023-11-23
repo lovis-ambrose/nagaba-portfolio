@@ -43,3 +43,46 @@ function pageTransitions(){
     // })
 }
 pageTransitions();
+
+
+// form validation
+function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            // Reset error messages
+            document.getElementById('nameError').innerHTML = '';
+            document.getElementById('emailError').innerHTML = '';
+            document.getElementById('subjectError').innerHTML = '';
+            document.getElementById('messageError').innerHTML = '';
+
+            // Validate name
+            if (name.trim() === '') {
+                document.getElementById('nameError').innerHTML = 'Please enter your name.';
+                return false;
+            }
+
+            // Validate email
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').innerHTML = 'Please enter a valid email address.';
+                return false;
+            }
+
+            // Validate subject
+            if (subject.trim() === '') {
+                document.getElementById('subjectError').innerHTML = 'Please enter the subject.';
+                return false;
+            }
+
+            // Validate message
+            if (message.trim() === '') {
+                document.getElementById('messageError').innerHTML = 'Please enter your message.';
+                return false;
+            }
+
+            // Form is valid
+            return true;
+        }

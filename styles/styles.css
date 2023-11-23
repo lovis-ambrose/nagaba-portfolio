@@ -507,6 +507,7 @@ section {
     transform: scale(1);
 }
 
+
 /* Blogs section */
 .blogs {
     display: grid;
@@ -652,6 +653,11 @@ section {
 .contact-content-con .right-contact .input-control {
     margin: 1.5rem 0;
 }
+/* display input form error */
+.contact-content-con .right-contact .input-control .error-message {
+    color: red;
+    margin-top: 20px;
+}
 
 .contact-content-con .right-contact .input-control input,
 .contact-content-con .right-contact .input-control textarea {
@@ -677,6 +683,19 @@ section {
     justify-content: flex-end;
 }
 
+.contact-content-con .right-contact .submit-btn button {
+    background-color: var(--color-primary);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--color-White);
+}
+.contact-content-con .right-contact .submit-btn button:hover{
+    background-color: var(--color-secondary);
+
+}
 
 /* Independent components */
 .btn-con {
@@ -753,6 +772,8 @@ section {
     font-weight: 800;
     font-style: 6.3rem;
 }
+
+
 
 /* Responsive styles */
 @media screen and (max-width: 600px) {
@@ -935,5 +956,61 @@ section {
         .bg-text {
             font-size: 4rem;
         }
+    }
+}
+/* Media Queries */
+@media only screen and (max-width: 1200px) {
+    .portfolios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .portfolios {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .blogs {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .contact-content-con .left-contact {
+        flex: 2;
+        margin-bottom: 0;
+    }
+
+    .contact-content-con .right-contact {
+        flex: 3;
+    }
+
+    .contact-content-con .left-contact .contact-info .contact-item {
+        flex-direction: row;
+        text-align: left; /* Reset text alignment for larger screens */
+    }
+
+    .contact-content-con .left-contact .contact-info .contact-item .icon {
+        justify-content: flex-start; /* Align icon to the left for larger screens */
+        margin-bottom: 0; /* Reset margin for larger screens */
+    }
+
+    .contact-content-con .left-contact .contact-icon {
+        justify-content: flex-start; /* Align icons to the left for larger screens */
+        margin-top: 2rem; /* Reset margin for larger screens */
+    }
+
+    .contact-content-con .left-contact .contact-icon a {
+        width: 50px; /* Reset width of icons for larger screens */
+        height: 50px; /* Reset height of icons for larger screens */
+        margin: 0 .4rem; /* Reset margin for spacing on larger screens */
     }
 }

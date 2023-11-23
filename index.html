@@ -53,7 +53,7 @@
                 <div class="left-about">
                     <h4>Information about me</h4>
                     <p>
-                        <span style="color: green;">Hello!</span> <br/> I'm a dedicated web developer at Makerere University. With a passion for leveraging technology in education, I create digital experiences that leave a lasting impact. 
+                        <span style="color: green;">Hello!</span> <br/> I'm a dedicated web developer at Multitech Bussiness School. With a passion for leveraging technology in education, I create digital experiences that leave a lasting impact. 
                         Dive into my journey, explore my skills, and join me in shaping the future of online learning and innovation.
                     </p>
                     <div class="btn-con">
@@ -156,7 +156,7 @@
                         <i class="fa fa-university"></i>
                     </div>
                     <p class="tl-duration">2021 - present</p>
-                    <h5>Student <span> - Makerere University</span></h5>
+                    <h5>Student <span> - Multitech Bussiness School</span></h5>
                     <p>
                         Software Engineering student.
                     </p>
@@ -166,7 +166,7 @@
                         <i class="fa fa-graduation-cap"></i>
                     </div>
                     <p class="tl-duration">2021 - present</p>
-                    <h5>Student <span> - Makerere University</span></h5>
+                    <h5>Student <span> - Multitech Bussiness School</span></h5>
                     <p>
                         Software Engineering student.
                     </p>
@@ -176,7 +176,7 @@
                         <i class="fa fa-graduation-cap"></i>
                     </div>
                     <p class="tl-duration">2021 - present</p>
-                    <h5>Student <span> - Makerere University</span></h5>
+                    <h5>Student <span> - Multitech Bussiness School</span></h5>
                     <p>
                         Software Engineering student.
                     </p>
@@ -186,7 +186,7 @@
                         <i class="fa fa-graduation-cap"></i>
                     </div>
                     <p class="tl-duration">2021 - present</p>
-                    <h5>Student <span> - Makerere University</span></h5>
+                    <h5>Student <span> - Multitech Bussiness School</span></h5>
                     <p>
                         Software Engineering student.
                     </p>
@@ -200,7 +200,7 @@
                 <h2>My <span> Projects</span><span class="bg-text"> my work</span></h2>
             </div>
             <p class="port-text">
-                Explore my diverse projects showcasing the intersection of technology and education at Makerere University.
+                Explore my diverse projects showcasing the intersection of technology and education at Multitech Bussiness School.
                 From innovative web applications to dynamic solutions, each project reflects my commitment to pushing boundaries and creating meaningful digital experiences.
                 Get a glimpse into the transformative work that defines my journey as a web developer.
             </p>
@@ -383,7 +383,7 @@
         <section class="section sec4" id="blogs">
             <div class="blogs-content">
                 <div class="main-title">
-                    <h2>Blogs.<span class="bg-text"> Learn from experts</span></h2>
+                    <h2>Latest <span>Blogs</span><span class="bg-text"> Learn from experts</span></h2>
                 </div>
                 <div class="blogs">
                     <div class="blog">
@@ -418,10 +418,13 @@
         </section>
         <!-- contact section -->
         <section class="section sec5" id="contact">
-            <div class="contact-container">
+            <div class="main-title">
                 <div class="main-title">
-                    <h2>Contact <span> Me</span><span class="bg-text"> Contact Me</span></h2>
+                    <h2>Contact <span>me</span><span class="bg-text"> Let's talk Tech</span></h2>
                 </div>
+            </div>
+            <div class="contact-container">
+                
                 <div class="contact-content-con">
                     <div class="left-contact">
                         <h4>Contact me</h4>
@@ -444,7 +447,7 @@
                                     Email:
                                 </div>
                                 <p>
-                                    nagaba@gmail.com.
+                                    nagabalillian21@gmail.com
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -453,7 +456,7 @@
                                     Education:
                                 </div>
                                 <p>
-                                    Makerere University.
+                                    Multitech Bussiness School
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -462,7 +465,7 @@
                                     Mobile Number:
                                 </div>
                                 <p>
-                                    +2567xxxxxxxx.
+                                    +256762728568
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -493,25 +496,32 @@
                         </div>
                     </div>
                     <div class="right-contact">
-                        <form action="#" class="contact-form">
+                        <form action="#" class="contact-form" onsubmit="return validateForm()">
                             <div class="input-control cont-2">
-                                <input type="text" required placeholder="your name">
-                                <input type="email" required placeholder="your email">
+                                <input type="text" id="name"  placeholder="Your name">
+                                <div id="nameError" class="error-message"></div>
+                    
+                                <input type="email" id="email"  placeholder="Your email">
+                                <div id="emailError" class="error-message"></div>
                             </div>
+                    
                             <div class="input-control">
-                                <input type="text" required placeholder="enter subject">
+                                <input type="text" id="subject"  placeholder="Enter subject">
+                                <div id="subjectError" class="error-message"></div>
                             </div>
+                    
                             <div class="input-control">
-                                <textarea name="#" id="" cols="15" rows="8" placeholder="your message...."></textarea>
+                                <textarea id="message" name="#" id="" cols="15" rows="8"  placeholder="Your message...."></textarea>
+                                <div id="messageError" class="error-message"></div>
                             </div>
+                    
                             <div class="submit-btn">
-                                <a href="#" class="main-btn">
-                                    <span class="btn-text">Submit</span>
-                                    <span class="btn-icon"><i class="fa fa-comments"></i></span>
-                                </a>
+                                <button type="submit" value="Submit">
+                                    Submit Message
+                                </button>
                             </div>
                         </form>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </section>
