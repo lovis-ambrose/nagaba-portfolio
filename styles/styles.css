@@ -567,7 +567,7 @@ section {
     padding-bottom: 1rem;
 }
 
-/* Contact section */
+/* Contact section *//* contact section */
 .contact-content-con {
     display: flex;
     padding-top: 3.5rem;
@@ -595,13 +595,53 @@ section {
 }
 
 .contact-content-con .left-contact .contact-info .contact-item p {
-    margin: 0.3rem 0 !important;
+    margin: .3rem 0 !important;
     padding: 0 !important;
 }
 
 .contact-content-con .left-contact .contact-info .contact-item .icon {
     display: grid;
     grid-template-columns: 40px 1fr;
+}
+
+.contact-content-con .left-contact .contact-info .contact-item .icon i {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.contact-content-con .left-contact .contact-icon {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.contact-content-con .left-contact .contact-icon a {
+    display: flex;
+    align-items: center;
+    color: var(--color-White);
+    background-color: var(--color-grey-5);
+    cursor: pointer;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 .4rem;
+    transition: all .4s ease-in-out;
+}
+
+.contact-content-con .left-contact .contact-icon a:hover {
+    background-color: var(--color-secondary);
+}
+
+.contact-content-con .left-contact .contact-icon a:hover i {
+    color: var(--color-primary);
+}
+
+.contact-content-con .left-contact .contact-icon a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
 }
 
 .contact-content-con .right-contact {
@@ -619,7 +659,7 @@ section {
     font-weight: inherit;
     font-size: inherit;
     font-family: inherit;
-    padding: 0.8rem 1.1rem;
+    padding: .8rem 1.1rem;
     outline: none;
     border: none;
     background-color: var(--color-grey-5);
@@ -636,6 +676,7 @@ section {
     display: flex;
     justify-content: flex-end;
 }
+
 
 /* Independent components */
 .btn-con {
