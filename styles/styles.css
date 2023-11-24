@@ -140,6 +140,8 @@ section {
     pointer-events: none;
 }
 
+
+
 /* header content */
 .header-content {
     display: grid;
@@ -934,6 +936,37 @@ section {
         .control {
             margin: 0.6rem 1rem !important;
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .controls {
+        right: 1%;
+    }
+
+    .controls .control {
+        width: 45px;
+        height: 45px;
+    }
+
+    .controls .control i {
+        font-size: 1rem;
+    }
+}
+
+/* Additional adjustments for Galaxy Fold */
+@media screen and (max-width: 280px) {
+    .controls {
+        right: 1%;
+    }
+
+    .controls .control {
+        width: 35px;
+        height: 35px;
+    }
+
+    .controls .control i {
+        font-size: 0.8rem;
     }
 }
 
